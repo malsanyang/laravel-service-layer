@@ -1,0 +1,61 @@
+name: Feature request
+description: Suggest an improvement or new capability for Laravel Service Layer.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping improve Laravel Service Layer.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Describe the problem this feature would solve and who would benefit.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Explain the behaviour or API you would like to see.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example usage
+      description: Show what the proposed API or workflow might look like.
+      render: php
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe existing workarounds or alternative designs you considered.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: backward-compatibility
+    attributes:
+      label: Could this introduce a breaking change?
+      options:
+        - "No"
+        - Possibly
+        - "Yes"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to submit a pull request for this feature.
+          required: false
