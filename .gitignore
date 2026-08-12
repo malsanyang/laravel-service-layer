@@ -1,0 +1,11 @@
+node_modules/
+dist/
+
+composer.lock
+/vendor/
+.idea/
+.vscode/
+*.iws
+/out/
+.idea_modules/
+.phpunit.result.cache
