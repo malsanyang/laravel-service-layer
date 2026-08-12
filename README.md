@@ -7,7 +7,7 @@ optional binding cache for production.
 ## Requirements
 
 - PHP `^8.3`
-- Laravel 11, 12, or 13
+- Laravel 12 or 13
 
 ## Installation
 

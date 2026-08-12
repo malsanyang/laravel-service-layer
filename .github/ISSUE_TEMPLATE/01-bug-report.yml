@@ -42,7 +42,6 @@ body:
     attributes:
       label: Laravel version
       options:
-        - Laravel 11
         - Laravel 12
         - Laravel 13
     validations:
