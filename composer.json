@@ -1,0 +1,60 @@
+{
+  "name": "malsanyang/laravel-service-layer",
+  "description": "Convention-based service layer generators and automatic contract-to-service binding for Laravel.",
+  "keywords": ["laravel", "service-layer", "services", "contracts", "artisan", "generator"],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Malang Sanyang",
+      "email": "207468692+malsanyang@users.noreply.github.com"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "illuminate/console": "^11.0|^12.0|^13.0",
+    "illuminate/contracts": "^11.0|^12.0|^13.0",
+    "illuminate/support": "^11.0|^12.0|^13.0"
+  },
+  "require-dev": {
+    "larastan/larastan": "^3.0",
+    "orchestra/testbench": "^9.0|^10.0|^11.0",
+    "phpunit/phpunit": "^10.5|^11.0|^12|^13.0",
+    "laravel/pint": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MalSanyang\\ServiceLayer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MalSanyang\\ServiceLayer\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MalSanyang\\ServiceLayer\\ServiceLayerServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+    "lint": "vendor/bin/pint --parallel",
+    "lint:check": "vendor/bin/pint --parallel --test",
+    "check": [
+      "@lint:check",
+      "@analyse",
+      "@test"
+    ],
+    "ci:check": [
+        "@composer validate --strict",
+        "@check",
+        "@composer audit"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

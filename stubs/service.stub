@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ baseService }};
+use {{ contractFqn }};
+
+class {{ class }} extends BaseService implements {{ contract }}
+{
+    //
+}
